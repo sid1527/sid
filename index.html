@@ -2,16 +2,103 @@
 <html>
 <head>
 	<title>Things I've Learned</title>
+	<style type="text/css">
+
+		body{
+			background-image: url("https://images.pexels.com/photos/259915/pexels-photo-259915.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
+			background-size: contain;
+			background-attachment: fixed;
+		}
+
+		div{
+			background-color: lightgreen;
+			width: 500px;
+		}
+
+
+		ul#l1{
+			list-style-type: none;
+			margin: 0px;
+			padding: 0px;
+			overflow: hidden;
+			background-color: #333333;
+		}
+
+		.l {
+			float: left;
+		}
+
+		.l a{
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 16px;
+			text-decoration: none;
+		}
+
+		.l a:hover{
+			background-color: #111111;
+		}
+
+		caption{
+			font-size: 40px;
+			background-color: cyan;
+		}
+
+		tr:nth-child(even){
+			background-color: red;
+		}
+
+		tr:nth-child(odd){
+			background-color: cyan;
+		}
+
+
+
+		table ,tr,td,th{
+			border: 3px solid black;
+			border-collapse: collapse;
+			padding: 4px;
+		}
+
+		th{
+			background-color: black;
+			border: 3px solid yellow;
+			color: white;
+			font-family: sans-serif;
+			font-size: 30px;
+		}
+
+		form#f1{
+			background-image:  url("https://everything.typepad.com/photos/uncategorized/2008/03/28/crosshatch.png");
+			padding: 5px;
+			margin: 5px;
+			border: 3px dashed tomato;
+			border-radius: 25px;
+		}
+
+	</style>
 </head>
 <body>
+	<br><br>
+
+<ul id="l1">
+	<li class="l"><a href="#l1">HOME</a></li>
+	<li class="l"><a href="#l2">LIST</a></li>
+	<li class="l"><a href="#t1">TABLE</a></li>
+	<li class="l"><a href="#f1">FORM</a></li>
+</ul>
+
+<br><br>
+<div>
 <h1>Things I've Learned</h1>
-<h2>Internet Basics</h2>
-<ol>
-	<li>HTTP Requests</li>
+<h2 style="color: red">Internet Basics</h2>
+<ol id="l2">
+	<li><mark>HTTP Requests</mark></li>
 	<li>IP Address</li>
 	<li>Servers</li>
 </ol>
-<h2>HTML</h2>
+<h2><abbr title="Hyper Text Markup Language">HTML</abbr></h2>
 <ul>
 	<li>Stands for <strong>Hyper Text Markup Language</strong></li>
 	<li>Lots of tags
@@ -20,7 +107,7 @@
 				<ol>
 					<li>Doctype</li>
 					<li>HTML</li>
-					<li>Head
+					<li>Head 
 						<ol>
 							<li>Title</li>
 						</ol></li>
@@ -32,5 +119,95 @@
 			<li><strong>strong</strong></li>
 		</ul></li>
 </ul>
+</div>
+<br><br>
+<table id="t1">
+	<caption><em><strong>First Gen Pokemon Chart</strong></em></caption>
+	<br>
+	<tr>
+		<th>Image</th>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Evolves to</th>
+	</tr>
+	<tr>
+		<td><img src="http://img4.wikia.nocookie.net/__cb20140328190757/pokemon/images/thumb/2/21/001Bulbasaur.png/200px-001Bulbasaur.png" /></td>
+		<td>Bulbasaur</td>
+		<td>Grass/Poison</td>
+		<td><a href="http://pokemon.wikia.com/wiki/Ivysaur ">Ivysaur</a></td>
+	</tr>
+	<tr>
+		<td><img src="http://img4.wikia.nocookie.net/__cb20140724195345/pokemon/images/thumb/7/73/004Charmander.png/200px-004Charmander.png" /><figcaption>hello</figcaption></td>
+		<td>Charmander</td>
+		<td>Fire</td>
+		<td><a href="http://pokemon.wikia.com/wiki/Charmeleon" target="_blank">Charmeleon</a></td>
+	</tr>
+	<tr>
+		<td><img src="http://img1.wikia.nocookie.net/__cb20140328191525/pokemon/images/thumb/3/39/007Squirtle.png/200px-007Squirtle.png" /></td>
+		<td>Squirtle</td>
+		<td>Water</td>
+		<td><a href="http://pokemon.wikia.com/wiki/Wartortle">Wartortle</a></td>
+	</tr>
+</table>
+
+<br><br><br>
+
+<form id="f1">
+	<h1>Register</h1>
+	<hr><hr>
+
+	<label for="firstname">First Name:</label>
+	<input type="text" id="firstname" name="firstname" placeholder="John" required>
+	<br>
+	<label for="lastname">Last Name:</label>
+	<input type="text" id="lastname" name="lastname" placeholder="Smith" required>
+	<br>
+	<fieldset>
+		<legend>Gender:</legend>
+	<input type="radio" name="gender" id="male" value="male">
+	<label for="male">Male</label>
+	<br>
+	<input type="radio" name="gender" id="female" value="female">
+	<label for="female">Female</label>
+	<br>
+	<input type="radio" name="gender" id="other" value="other">
+	<label for="other">Other</label>
+	</fieldset>
+	<br>
+	<label for="email">Email:</label>
+	<input type="email" id="email" name="email" placeholder="your email">
+	<br>
+	<label for="password">Password:</label>
+	<input type="password" id="password" name="password" placeholder="your password" minlength="5" maxlength="10">
+	<br>
+	<p>Birthday:
+	<select name="Month">
+		<option>Jan</option>
+		<option>Feb</option>
+		<option>March</option>
+		<option>April</option>
+		<option>May</option>
+	</select>
+	<select name="Date">
+		<option>1</option>
+		<option>2</option>
+		<option>3</option>
+		<option>4</option>
+		<option>5</option>
+	</select>
+	<select name="Year">
+		<option>1996</option>
+		<option>1997</option>
+		<option>1998</option>
+		<option>1999</option>
+		<option>2000</option>
+	</select></p>
+	<p>I agree to the terms and conditions.
+		<input type="checkbox" name="agree" required>
+	</p>
+	<button>Submit</button>
+	<br>
+</form>
+<br><br>
 </body>
 </html>
